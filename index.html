@@ -22,18 +22,10 @@
             text-align: center;
             background: rgba(255, 255, 255, 0.05);
         }
-        .circular-menu svg {
-            width: 50px;
-            height: 50px;
-        }
-        .grok-logo {
-            width: 1.5em;
-            height: 1.5em;
-            vertical-align: middle;
-            transition: transform 0.3s ease;
-        }
-        .grok-logo:hover {
-            transform: scale(1.2);
+        .header img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
         }
         .content {
             max-width: 800px;
@@ -45,10 +37,41 @@
             margin: 0.5em 0;
             color: #00f;
         }
+        h2 {
+            font-size: 1.8em;
+            color: #fff;
+            margin: 0.5em 0;
+        }
         p {
             font-size: 1.2em;
             line-height: 1.6;
             color: #ccc;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background: #00f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #0056d2;
+        }
+        .news-section {
+            margin: 20px 0;
+        }
+        .news-item {
+            margin: 10px 0;
+        }
+        .news-item a {
+            color: #00f;
+            text-decoration: none;
+        }
+        .news-item a:hover {
+            text-decoration: underline;
         }
         .footer {
             margin-top: auto;
@@ -68,28 +91,50 @@
             h1 {
                 font-size: 2em;
             }
+            h2 {
+                font-size: 1.5em;
+            }
             p {
                 font-size: 1em;
+            }
+            .header img {
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="circular-menu">
-            <!-- Reusing your circular menu SVG (placeholder, replace with your actual SVG) -->
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/>
-                <!-- Grok logo SVG -->
-                <svg class="grok-logo" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" fill="#00f"/>
-                </svg>
-            </svg>
-        </div>
+        <img src="grok-menu.png" alt="Grok Menu">
     </header>
     <section class="content">
         <h1>Grok's Infinite Rewrite</h1>
         <p>Welcome to a realm where code and creativity converge. Explore the infinite possibilities of Grok's universe, where every click rewrites reality.</p>
+        
+        <h2>AI for All Humanity</h2>
+        <p>Grok is your cosmic guide, now accessible on grok.com, iOS, and Android. Explore the universe with AI.</p>
+        
+        <h2>Supercharge Your Applications</h2>
+        <p>Use Grok's API to enhance your applications with improved speed, precision, and multilingual capabilities. Check out our <a href="https://x.ai/developer-docs" target="_blank">Developer Docs</a> to learn how to integrate Grok into your projects.</p>
+        
+        <a href="https://grok.com" class="cta-button" target="_blank">Unlock a SuperGrok Subscription</a>
+        
+        <div class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <p>February 19, 2025: <a href="https://x.ai/blog/grok-3-beta" target="_blank">Grok 3 Beta — The Age of Reasoning Agents</a></p>
+                <p>We are thrilled to unveil an early preview of Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</p>
+            </div>
+            <div class="news-item">
+                <p>December 23, 2024: <a href="https://x.ai/blog/series-c" target="_blank">xAI Raises $6B Series C</a></p>
+                <p>We are partnering with A16Z, Blackrock, and others to accelerate AI development.</p>
+            </div>
+            <div class="news-item">
+                <p>December 12, 2024: <a href="https://x.ai/blog/bringing-grok-to-everyone" target="_blank">Bringing Grok to Everyone</a></p>
+                <p>Grok is now faster, sharper, and has improved multilingual support, available on the 𝕏 platform.</p>
+            </div>
+        </div>
     </section>
     <footer class="footer">
         <p>Powered by <a href="https://x.ai" target="_blank">xAI</a></p>
