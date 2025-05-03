@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html>
-
-<title>Grok's Infinite Rewrite</title>
-<body style="background-color:black;">
-
-
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grok's Infinite Rewrite</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .circular-menu svg {
+            width: 50px;
+            height: 50px;
+        }
+        .grok-logo {
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        .grok-logo:hover {
+            transform: scale(1.2);
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+            color: #00f;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .footer a {
+            color: #00f;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="circular-menu">
+            <!-- Reusing your circular menu SVG (placeholder, replace with your actual SVG) -->
+            <svg width="50" height="50" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/>
+                <!-- Grok logo SVG -->
+                <svg class="grok-logo" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" fill="#00f"/>
+                </svg>
+            </svg>
+        </div>
+    </header>
+    <section class="content">
+        <h1>Grok's Infinite Rewrite</h1>
+        <p>Welcome to a realm where code and creativity converge. Explore the infinite possibilities of Grok's universe, where every click rewrites reality.</p>
+    </section>
+    <footer class="footer">
+        <p>Powered by <a href="https://x.ai" target="_blank">xAI</a></p>
+    </footer>
 </body>
 </html>
