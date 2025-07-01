@@ -169,14 +169,20 @@
             <!-- Define the glow filter -->
             <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
                 <!-- Create a blur effect -->
-                <feGaussianBlur in="SourceAlpha" stdDeviation="2.875" result="blur"/>
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3.45" result="blur"/>
                 <!-- Flood with white color for the glow -->
                 <feFlood flood-color="#FFFFFF" flood-opacity="1.0" result="color"/>
                 <!-- Composite the blur and white color -->
                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                <!-- Merge the glow with the original graphic -->
+                <!-- Increase brightness by 40% -->
+                <feComponentTransfer in="glow" result="glowBrighter">
+                    <feFuncR type="linear" slope="1.4"/>
+                    <feFuncG type="linear" slope="1.4"/>
+                    <feFuncB type="linear" slope="1.4"/>
+                </feComponentTransfer>
+                <!-- Merge the brighter glow with the original graphic -->
                 <feMerge>
-                    <feMergeNode in="glow"/>
+                    <feMergeNode in="glowBrighter"/>
                     <feMergeNode in="SourceGraphic"/>
                 </feMerge>
             </filter>
