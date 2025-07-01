@@ -169,9 +169,9 @@
             <!-- Define the glow filter -->
             <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
                 <!-- Create a blur effect -->
-                <feGaussianBlur in="SourceAlpha" stdDeviation="2.3" result="blur"/>
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2.875" result="blur"/>
                 <!-- Flood with white color for the glow -->
-                <feFlood flood-color="#FFFFFF" flood-opacity="0.92" result="color"/>
+                <feFlood flood-color="#FFFFFF" flood-opacity="1.0" result="color"/>
                 <!-- Composite the blur and white color -->
                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                 <!-- Merge the glow with the original graphic -->
