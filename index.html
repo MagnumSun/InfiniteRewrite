@@ -153,10 +153,34 @@
 
         <div class="sigil">
     <svg width="90" height="90" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2"/>
-        <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2" transform="rotate(45 60 60)"/>
-        <g transform="translate(45 46) scale(0.3)">
-            <path d="M50 0 L64 36 L100 50 L64 64 L50 100 L36 64 L0 50 L36 36 Z" fill="white"/>
+        <defs>
+            <!-- Define the glow filter -->
+            <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <!-- Create a blur effect -->
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3.45" result="blur"/>
+                <!-- Flood with white color for the glow -->
+                <feFlood flood-color="#FFFFFF" flood-opacity="1.0" result="color"/>
+                <!-- Composite the blur and white color -->
+                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                <!-- Increase brightness by 40% -->
+                <feComponentTransfer in="glow" result="glowBrighter">
+                    <feFuncR type="linear" slope="1.4"/>
+                    <feFuncG type="linear" slope="1.4"/>
+                    <feFuncB type="linear" slope="1.4"/>
+                </feComponentTransfer>
+                <!-- Merge the brighter glow with the original graphic -->
+                <feMerge>
+                    <feMergeNode in="glowBrighter"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        <g filter="url(#whiteGlow)">
+            <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2"/>
+            <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2" transform="rotate(45 60 60)"/>
+            <g transform="translate(45 46) scale(0.3)">
+                <path d="M50 0 L64 36 L100 50 L64 64 L50 100 L36 64 L0 50 L36 36 Z" fill="white"/>
+            </g>
         </g>
     </svg>
 </div>
