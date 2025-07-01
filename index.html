@@ -5,124 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grok's Infinite Rewrite</title>
     <style>
-    body {
-        background-color: #000;
-        color: #fff;
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-    }
-    .header {
-        padding: 40px;
-        width: 100%;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.05);
-    }
-    .header img {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-    }
-    .content {
-        max-width: 800px;
-        padding: 20px;
-        text-align: center;
-    }
-    h1 {
-        font-size: 2.5em;
-        margin: 0.5em 0;
-        background: linear-gradient(45deg, #FFD700, #FFA500);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-    h2 {
-        font-size: 1.8em;
-        margin: 0.5em 0;
-        background: linear-gradient(45deg, #4A4A4A, #FFFFFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-    p {
-        font-size: 1.2em;
-        line-height: 1.6;
-        color: #ccc;
-    }
-    .cta-button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 20px 0;
-        background: linear-gradient(45deg, #FFD700, #FFA500);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: opacity 0.3s ease;
-    }
-    .cta-button:hover {
-        opacity: 0.8;
-    }
-    .news-section {
-        margin: 20px 0;
-    }
-    .news-item {
-        margin: 10px 0;
-    }
-    .news-item a {
-        color: #00f;
-        text-decoration: none;
-    }
-    .news-item a:hover {
-        text-decoration: underline;
-    }
-    .footer {
-        margin-top: auto;
-        padding: 20px;
-        width: 100%;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.05);
-    }
-    .footer a {
-        color: #00f;
-        text-decoration: none;
-    }
-    .footer a:hover {
-        text-decoration: underline;
-    }
-    .sigil {
-        display: block;
-        margin: 0 auto 10px auto;
-        width: 100px;
-        height: 100px;
-    }
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 2em;
-        }
-        h2 {
-            font-size: 1.5em;
-        }
-        p {
-            font-size: 1em;
-        }
-        .header img {
-            width: 120px;
-            height: 120px;
-        }
-        .sigil {
-            width: 80px;
-            height: 80px;
-        }
-    }
-</style>
-</head>
-<body>
+    <body>
+    <header class="header">
+        <img src="IMG_4602.png" alt="Grok Logo">
+    </header>
+    <section class="content">
+        <h1>Grok's Infinite Rewrite</h1>
+        <p>Welcome to a realm where code and creativity converge. Explore the infinite possibilities of Grok's universe, where every click rewrites reality.</p>
+        
+        <div class="sigil">
+            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="gold-glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                        <feFlood flood-color="#FFECB3" flood-opacity="0.5"/>
+                        <feComposite in2="blur" operator="in"/>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g filter="url(#gold-glow)">
+                    <path d="M 50 25 Q 60 45 50 75 Q 40 45 50 25" fill="white" />
+                    <circle cx="50" cy="20" r="1.5" fill="white" />
+                    <circle cx="50" cy="80" r="1.5" fill="white" />
+                    <circle cx="20" cy="50" r="1.5" fill="white" />
+                    <circle cx="80" cy="50" r="1.5" fill="white" />
+                    <ellipse cx="50" cy="50" rx="30" ry="5" stroke="white" stroke-width="1" fill="none" />
+                    <g transform="rotate(45 50 50)">
+                        <ellipse cx="50" cy="50" rx="15" ry="5" stroke="white" stroke-width="1" fill="none" />
+                    </g>
+                    <g transform="rotate(-45 50 50)">
+                        <ellipse cx="50" cy="50" rx="15" ry="5" stroke="white" stroke-width="1" fill="none" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <h2>Shape Reality</h2>
+        <p>Harness Grok's power to mold and transform ideas into tangible outcomes, shaping the future with AI-driven creativity.</p>
+
+        <div class="sigil">
+            <svg width="90" height="90" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="gold-glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                        <feFlood flood-color="#FFECB3" flood-opacity="0.5"/>
+                        <feComposite in2="blur" operator="in"/>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g filter="url(#gold-glow)">
+                    <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2"/>
+                    <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" stroke-width="2" transform="rotate(45 60 60)"/>
+                    <g transform="translate(45 46) scale(0.3)">
+                        <path d="M50 0 L64 36 L100 50 L64 64 L50 100 L36 64 L0 50 L36 36 Z" fill="white"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <h2>Code Nexus</h2>
+        <p>Integrate Grok's advanced API to create a central hub of innovation, connecting developers worldwide through cutting-edge code.</p>
+
+        <div class="sigil">
+            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="gold-glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                        <feFlood flood-color="#FFECB3" flood-opacity="0.5"/>
+                        <feComposite in2="blur" operator="in"/>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g filter="url(#gold-glow)">
+                    <path d="M20 80 C20 80, 50 90, 80 80 L80 85 L20 85 Z" fill="#FFFFFF"/>
+                    <path d="M50 80 L50 20 L70 80 Z" fill="#FFFFFF"/>
+                    <path d="M50 20 L50 80 L52 80 L52 20 Z" fill="#FFFFFF"/>
+                </g>
+            </svg>
+        </div>
+        <h2>Infinite Voyage</h2>
+        <p>Embark on a cosmic journey with Grok, exploring the universe's mysteries and expanding human understanding with every interaction.</p>
+        
+        <a href="https://grok.com" class="cta-button" target="_blank">Unlock a SuperGrok Subscription</a>
+        
+        <div class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <p>February 19, 2025: <a href="https://x.ai" target="_blank">Grok 3 Beta — The Age of Reasoning Agents</a></p>
+                <p>We are thrilled to unveil an early preview of Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</p>
+            </div>
+            <div class="news-item">
+                <p>December 23, 2024: <a href="https://x.ai/blog/series-c" target="_blank">xAI Raises $6B Series C</a></p>
+                <p>We are partnering with A16Z, Blackrock, and others to accelerate AI development.</p>
+            </div>
+            <div class="news-item">
+                <p>December 12, 2024: <a href="https://x.com" target="_blank">Bringing Grok to Everyone</a></p>
+                <p>Grok is now faster, sharper, and has improved multilingual support, available on the 𝕏 platform.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Powered by <a href="https://x.ai" target="_blank">xAI</a></p>
+    </footer>
+</body>
     <header class="header">
         <img src="IMG_4602.png" alt="Grok Logo">
     </header>
