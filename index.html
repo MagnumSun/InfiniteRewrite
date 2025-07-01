@@ -166,17 +166,21 @@
         <div class="sigil">
     <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <!-- Define the glow filter with doubled size and increased brightness -->
+            <!-- Define the glow filter with reduced spread and brighter edges -->
             <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <!-- Create a blur effect with doubled stdDeviation -->
-                <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
-                <!-- Flood with white color for brighter glow -->
+                <!-- Create a blur effect with reduced stdDeviation -->
+                <feGaussianBlur in="SourceAlpha" stdDeviation="8.4" result="blur"/>
+                <!-- Flood with white color for bright glow -->
                 <feFlood flood-color="#FFFFFF" flood-opacity="1.0" result="color"/>
                 <!-- Composite the blur and white color -->
                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                <!-- Merge the glow with the original graphic -->
+                <!-- Enhance edge brightness by adjusting alpha channel -->
+                <feComponentTransfer in="glow" result="glowEnhanced">
+                    <feFuncA type="gamma" amplitude="1" exponent="0.5"/>
+                </feComponentTransfer>
+                <!-- Merge the enhanced glow with the original graphic -->
                 <feMerge>
-                    <feMergeNode in="glow"/>
+                    <feMergeNode in="glowEnhanced"/>
                     <feMergeNode in="SourceGraphic"/>
                 </feMerge>
             </filter>
